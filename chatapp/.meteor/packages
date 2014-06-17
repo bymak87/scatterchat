@@ -8,8 +8,5 @@ autopublish
 insecure
 accounts-ui
 accounts-github
-google
-facebook
-oauth
 accounts-google
 accounts-facebook
