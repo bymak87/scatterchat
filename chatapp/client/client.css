@@ -1,11 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
 html {
   padding: 10px;
-  font-family: Verdana, sans-serif;
+  font-family: 'Josefin Slab', serif;
 }
 
 .login-buttons-dropdown-align-right {
   float:right;
 
+}
+h1{
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 65px;
 }
 
 .messages {
@@ -13,4 +20,23 @@ html {
   width: 50%;
   border: 10px black solid;
   border-radius: 10px;
+  font-size: 18px;
+  position: relative;
+  left: 25%;
+  padding-left: 15px;
+
+
+}
+
+span{
+  font-size: 10px;
+}
+.input{
+  position: relative;
+  left: 25%;
+}
+
+.messagebox{
+  width: 300px;
+  height: 20px;
 }

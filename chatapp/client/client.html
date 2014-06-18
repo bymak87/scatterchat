@@ -1,4 +1,6 @@
 <head>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
   <title>ScatterChat </title>
 </head>
 
@@ -15,18 +17,18 @@
 
 <template name="welcome">
   <p>
-     Please log in to show your username.
+     Please log in to show your username. Press enter to send messages.
   </p><br>
 </template>
 
 <template name="input">
-  <p>Message: <input type="text" id="message"></p>
+  <p class="input">Message: <input type="text" id="message" class="messagebox"></p>
 </template>
 
 <template name="messages">
   <div class="messages">
     {{#each messages }}
-      <p><strong>{{name}}:</strong> {{message}} &nbsp; {{time}} <br></p>
+      <p><strong>{{name}}:</strong> {{message}} &nbsp;      <span>{{time}}</span> <br></p>
     {{/each}}
 </div>
 </template>
