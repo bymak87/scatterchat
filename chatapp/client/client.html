@@ -3,7 +3,8 @@
 </head>
 
 <body>
-  {{>loginButtons align="right" }} <img src="{{img_add}}">
+  {{>loginButtons align="right" }}
+  {{>email}}
 
 
   <br>
@@ -20,7 +21,7 @@
 </template>
 
 <template name="messages">
-{{#each messages}}
+{{#each messages }}
 <strong>{{name}}:</strong> {{message}} &nbsp; {{time}} <br>
 {{/each}}
 </template>
@@ -29,4 +30,8 @@
   <p>Message: <input type="text" id="message"></p>
 </template>
 
+<template name="email">
+  <p>Email Address: <input type="text" id="email"></p>
+
+</template>
 

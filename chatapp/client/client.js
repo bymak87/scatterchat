@@ -6,10 +6,10 @@ Template.messages.messages = function() {
   return Messages.find({}, { sort: { time: -1}});
 };
 
-// Template.messages.img_add = function() {
-//   var hash = CryptoJS.MD5(git_email);
-//   return img_add = "http://www.gravatar.com/avatar/" + hash;
-// };
+Template.messages.img_add = function() {
+  var hash = CryptoJS.MD5(git_email);
+  return img_add = "http://www.gravatar.com/avatar/" + hash;
+};
 
 Template.input.events = {
   'keydown input#message' : function (event) {
@@ -18,8 +18,8 @@ Template.input.events = {
         var name = Meteor.user().profile.name;
       else
         var name = 'Anonymous';
-      var message = document.getElementById('message');
-      var d = new Date();
+        var message = document.getElementById('message');
+        var d = new Date();
       if (message.value != '') {
         Messages.insert({
           name: name,
