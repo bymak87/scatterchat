@@ -1,10 +1,13 @@
 <head>
-  <title>Chat app</title>
+  <title>ScatChat </title>
 </head>
 
 <body>
-  {{>loginButtons align="right"}}<br>
-  <h1>Chatapp</h1>
+  {{>loginButtons align="right" }} <img src="{{img_add}}">
+
+
+  <br>
+  <h1>ScatChat</h1>
   {{> welcome}}
   {{>messages}}
   {{>input}}
@@ -12,16 +15,18 @@
 
 <template name="welcome">
   <p>
-    Welcome to the example chat app! Please log in to show your username.
+     Please log in to show your username.
   </p>
 </template>
 
 <template name="messages">
 {{#each messages}}
-<strong>{{name}}:</strong> {{message}} <br>
+<strong>{{name}}:</strong> {{message}} &nbsp; {{time}} <br>
 {{/each}}
 </template>
 
 <template name="input">
   <p>Message: <input type="text" id="message"></p>
 </template>
+
+
