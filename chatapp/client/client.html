@@ -1,5 +1,5 @@
 <head>
-  <title>ScatChat </title>
+  <title>ScatterChat </title>
 </head>
 
 <body>
@@ -7,26 +7,29 @@
 
 
   <br>
-  <h1>ScatChat</h1>
+  <h1>ScatterChat</h1>
   {{> welcome}}
-  {{>messages}}
-  {{>input}}
+  {{> input}}
+  {{> messages}}
 </body>
 
 <template name="welcome">
   <p>
      Please log in to show your username.
-  </p>
-</template>
-
-<template name="messages">
-{{#each messages }}
-<strong>{{name}}:</strong> {{message}} &nbsp; {{time}} <br>
-{{/each}}
+  </p><br>
 </template>
 
 <template name="input">
   <p>Message: <input type="text" id="message"></p>
 </template>
+
+<template name="messages">
+  <div class="messages">
+    {{#each messages }}
+      <p><strong>{{name}}:</strong> {{message}} &nbsp; {{time}} <br></p>
+    {{/each}}
+</div>
+</template>
+
 
 
