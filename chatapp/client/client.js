@@ -4,10 +4,6 @@
 
 
 
-// Template.messages.img_add = function() {
-//   var hash = CryptoJS.MD5(git_email);
-//   return img_add = "http://www.gravatar.com/avatar/" + hash;
-// };
 
 Template.input.events = {
   'keydown input#message' : function (event) {
@@ -16,7 +12,7 @@ Template.input.events = {
       if (Meteor.user())
         var name = Meteor.user().profile.name;
       else
-        var name = 'Anonymous';
+         var name = 'Anonymous';
         var message = document.getElementById('message');
       if (message.value != '') {
         Messages.insert({
